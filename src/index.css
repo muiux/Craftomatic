@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Outfit", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f0f0f0;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+}
+
+.app:before {
+  content: "";
+  background: url("./assets/sunset.jpg") no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.app .search {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.app input {
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.2);
+  color: #f8f8f8;
+}
+
+::placeholder {
+  color: #f8f8f8;
+}
+
+.loading {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1500px;
+  min-height: calc(100vh - 110px);
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.app .location {
+  text-align: center;
+}
+
+.app .region {
+  font-size: 2.5rem;
+  line-height: 50px;
+}
+
+.app .top {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.app .current-temp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app .weather {
+  text-align: center;
+}
+
+.app .other {
+  display: flex;
+  justify-content: center;
+}
+
+.app .other-info {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 600px;
+}
+
+.app .detail-info {
+  display: inline;
+  font-size: 1.2rem;
+  line-height: 50px;
+}
+
+.app .degree-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.app .degree {
+  margin-left: 30px;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0.4);
+  border: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.app .focus {
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+.app .description {
+  font-size: 2.5rem;
+  line-height: 50px;
+}
+
+.app .current-time {
+  font-size: 1.2rem;
+  line-height: 50px;
+}
+
+.app .bottom-title {
+  font-size: 3.5rem;
+  display: flex;
+  margin-left: 15px;
+}
+
+.app .forecast {
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.app .day {
+  text-align: center;
+  width: 50%;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.app .temp {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.app .low {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 5rem;
+  }
+  .app input {
+    font-size: 1rem;
+  }
+  .app .region {
+    font-size: 2rem;
+  }
+  .app .detail-info {
+    font-size: 0.8rem;
+  }
+  .app .degree {
+    font-size: 1.8rem;
+  }
+  .app .focus {
+    font-size: 3.8rem;
+  }
+  .app .description {
+    font-size: 2rem;
+  }
+  .app .current-time {
+    font-size: 1rem;
+  }
+  .app .bottom-title {
+    font-size: 2rem;
+  }
+  .app .date {
+    font-size: 0.8rem;
+  }
+  .app .high {
+    font-size: 1.4rem;
+  }
+  .app .low {
+    font-size: 1rem;
+  }
+  .app .desc {
+    font-size: 0.8rem;
+  }
+}
